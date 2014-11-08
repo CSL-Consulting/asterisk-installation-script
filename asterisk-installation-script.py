@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*- 
 #####################################################################
 # Author: Cristian Segura L.                                        #
 # Email: cristian+dot+segura+dot+lepe+arroba+dot+gmail+dot+com      #
