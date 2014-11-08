@@ -9,18 +9,50 @@
 # Usage: Installation of Asterisk IP PBX                            #
 #####################################################################
 
-lstArch = [
-	"amd64", "x86_64", "i386", "i686"
-]
 
-lstPkgs = {
-	'amd64': 'mv nmap tcpdump gcc gcc-g++ ',
-	'x86_64': 'mv nmap tcpdump gcc gcc-g++ ',
-	'i386': 'mv nmap tcpdump gcc gcc-g++ ',
-	'i686': 'mv nmap tcpdump gcc gcc-g++ '
-}
+import subprocess
+
+#lstArch = [
+#	"amd64", "x86_64", "i386", "i686"
+#]
+#
+#lstPkgs = {
+#	'amd64': 'mv nmap tcpdump gcc gcc-g++ ',
+#	'x86_64': 'mv nmap tcpdump gcc gcc-g++ ',
+#	'i386': 'mv nmap tcpdump gcc gcc-g++ ',
+#	'i686': 'mv nmap tcpdump gcc gcc-g++ '
+#}
 
 
+#subprocess.call(
+#	args,
+#	*, 
+#	stdin=None, 
+#	stdout=None,
+#	stderr=None,
+#	shell=False
+#)
+
+
+
+fname = ""
+baseURL = "http://downloads.asterisk.org/pub/telephony"
+
+lPriDir = "libpri"
+lPriTgzFile = "libpri-1.4-current.tar.gz"
+lPriDownPath = baseURL + '/' + lPriDir + '/' + lPriTgzFile
+
+lPriDir = "libpri"
+lPriTgzFile = "libpri-1.4-current.tar.gz"
+lPriDownPath = baseURL + '/' + lPriDir + '/' + lPriTgzFile
+
+print "==================================================="
+print "                                                   "
+print "   Downloading LIBPRI                              "
+print "                                                   "
+print "==================================================="
+print "[+]downloading file: %s using wget" % ( lPriDownPath )
+subprocess.call( ["wget", lPriDownPath] )
 
 
 
